@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  SignUpViewController.swift
 //  blogs
 //
 //  Created by ricardo on 11/20/21.
@@ -8,13 +8,14 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class SignUpViewController: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
-    }
 
+        title = "Sign In"
+        view.backgroundColor = .systemBackground
+    }
+    
 
 }
-

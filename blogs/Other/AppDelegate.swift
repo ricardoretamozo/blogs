@@ -5,7 +5,8 @@
 //  Created by ricardo on 11/20/21.
 //  Copyright © 2021 ricardo. All rights reserved.
 //
-
+import Purchases
+import Firebase
 import UIKit
 
 @UIApplicationMain
@@ -15,6 +16,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        FirebaseApp.configure()
+        
+        Purchases.configure(withAPIKey: "mgByuJPTRCAzIyGwIATAhYNgsYXpNcZB")
+        
+        IAPManager.shared.getSubscriptionStatus(completion: nil)
+        
         return true
     }
 
